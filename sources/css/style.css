@@ -101,6 +101,10 @@ header {
     text-decoration: underline;
 }
 
+.active {
+    text-decoration: underline !important;
+}
+
 #banner {
     background-image: linear-gradient(rgb(0 0 0 / 66%), rgba(0, 0, 0, 0.5)), url('../images/dados04.jpg');
     background-size: cover;
@@ -126,13 +130,20 @@ header {
 
 
 .descricao input {
-    padding: 10px;
+    padding: 20px;
     margin-top: 50px;
     font-size: 1.1em;
     border: 1px solid blue;
-    background: transparent;
+    background: #543ba0;
     color: white;
-    font-weight: bold;
+    font-family: "Roboto-bold", sans-serif;
+    font-size: 1.3em;
+}
+
+.descricao input:hover {
+    cursor: pointer;
+    background: #30215b;
+
 }
 
 .descricao h1, h2 {
@@ -196,9 +207,15 @@ header {
     /* margin-top: 50px; */
     font-size: 1.1em;
     border: 1px solid blue;
-    background: transparent;
+    background: #087FBB;
     color: white;
-    font-weight: bold;
+    font-family: "Roboto-bold", sans-serif;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #044f74;
+
 }
 
 #desc-servico {
@@ -297,16 +314,28 @@ footer {
     padding-right: 10px
 }
 
-.footer-desc p{
-    flex: 1;
-}
-
 .footer-desc p {
+    display: flex;
+    flex: 1;
+    align-items: center;
     line-height: 1.5;
 }
 
 .footer-desc .logo-footer {
     width: 150px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: start;
+}
+
+.rede-social a {
+    margin-right: 10px;
+}
+
+.rede-social img {
+    width: 40px;
 }
 
 @media screen and (max-width: 1420px) {
@@ -326,6 +355,10 @@ footer {
 @media screen and (max-width: 1060px) {
     .menu ul li {
         padding: 10px;
+    }
+
+    .menu ul a {
+        font-size: 1.2em;
     }
 }
 
@@ -351,6 +384,19 @@ footer {
     .mg-top-130 {
         margin-top: 10px !important;
     }
+
+    .conteudo-footer {
+        flex-direction: column;
+    }
+
+    .footer-desc {
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .rede-social a {
+        margin-right: 10px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -358,8 +404,17 @@ footer {
         width: 180px;
     }
 
-    .menu {
+    .menu nav ul {
         display: none;
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #F7F7F7;
     }
 
     .menu-mobile {
