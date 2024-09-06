@@ -82,6 +82,7 @@ header {
 .menu ul {
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 .menu ul li {
